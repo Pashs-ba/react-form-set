@@ -115,13 +115,23 @@ export const multi_select_element: FormElementType[] = [
 
 ]
 
-export const test_value: FormElementType[] = [
+export const test_empty: FormElementType[] = [
     {
         name: "test_value",
         label: "Test value",
         type: ElementType.INPUT,
         settings:{
-            value: "test"
+        }
+    }
+]
+
+export const test_initial_value: FormElementType[] = [
+    {
+        name: "test_value",
+        label: "Test value",
+        type: ElementType.INPUT,
+        settings:{
+            value: "some"
         }
     }
 ]
