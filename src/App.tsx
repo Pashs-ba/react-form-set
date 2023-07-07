@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import {Form} from "./components/Form.tsx";
+import {elements} from "./components/test_form.ts";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <h1>It works!</h1>
-  )
+    return (
+        <div className={"container mt-3"}>
+            <Form elements={elements} onSubmit={(el) => {
+                console.log(el)
+            }}/>
+        </div>
+    )
 }
 
 export default App
