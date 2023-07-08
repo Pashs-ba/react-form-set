@@ -12,7 +12,7 @@ import {
     FormType,
     SmartSelectType
 } from "./types.ts";
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import BaseInput from "./BaseInput";
 import BaseSelect from "./BaseSelect";
 import {BaseCheckbox} from "./BaseCheckbox";

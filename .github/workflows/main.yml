@@ -1,4 +1,4 @@
-name: Component tests
+name: Main workflow
 on: push
 jobs:
   run-tests:
