@@ -12,7 +12,7 @@ import {
     FormType,
     SmartSelectType
 } from "./types.ts";
-import {useEffect, useState} from "react";
+import {ReactElement, useEffect, useState} from "react";
 import BaseInput from "./BaseInput";
 import BaseSelect from "./BaseSelect";
 import {BaseCheckbox} from "./BaseCheckbox";
@@ -95,7 +95,7 @@ export function Form({
     function on_select_processing(el: any, name: string, settings: BaseSelectType | SmartSelectType) {
         if (settings.multiple) {
             element_value_change(
-                Array.from(el.currentTarget.selectedOptions, (element:any) => element.value),
+                Array.from(el.currentTarget.selectedOptions, (element: any) => element.value),
                 name
             )
         } else {
@@ -200,7 +200,7 @@ export function Form({
     }
 
     const form_elements = elements.map((element) => {
-        let rendered_element: React.ReactElement
+        let rendered_element: ReactElement
         switch (element.type) {
             case ElementType.INPUT:
                 rendered_element = create_input(element.settings as BaseInputType, element.name)
@@ -250,7 +250,9 @@ export function Form({
                 onClick={(el) => {
                     el.preventDefault()
                     onSubmit(form_values)
-                }}>
+                }}
+                data-bs-dismiss="modal"
+            >
                 {buttonText ? buttonText : "Submit"}
             </button>
         </form>
