@@ -14,7 +14,7 @@ export default function Modal({
     return (
         <div className="modal fade"
              id={connected_with}
-             tabIndex="-1"
+             tabIndex={-1}
              aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
