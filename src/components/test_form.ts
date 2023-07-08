@@ -135,3 +135,47 @@ export const test_initial_value: FormElementType[] = [
         }
     }
 ]
+
+export const test_select: FormElementType[] = [
+    {
+        label: "test select",
+        name: "test_select",
+        type: ElementType.SELECT,
+        settings: {
+            options: [
+                {
+                    text: "test",
+                    value: "test"
+                },
+                {
+                    text: "test2",
+                    value: "test2"
+                }
+            ]
+        }
+    }
+]
+export const smart_select: FormElementType[] = [
+    {
+        label: "test select",
+        name: "test_select",
+        type: ElementType.SMART_SELECT,
+        settings: {
+            options: [
+                {
+                    text: "test",
+                    value: "test"
+                },
+                {
+                    text: "test2",
+                    value: "test2"
+                },
+                {
+                    text: "some",
+                    value: "some"
+                }
+            ],
+            multiple: true
+        }
+    }
+]
